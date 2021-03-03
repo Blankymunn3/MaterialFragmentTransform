@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="com.blankymunn3.materialfragmenttransform.fragment.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/navToHomeSecondFragment"
+            app:destination="@id/home_sec"/>
+    </fragment>
+    <fragment
+        android:id="@+id/second"
+        android:name="com.blankymunn3.materialfragmenttransform.fragment.SecondFragment"
+        android:label="second_fragment"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/third"
+        android:name="com.blankymunn3.materialfragmenttransform.fragment.ThirdFragment"
+        android:label="third_fragment"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/home_sec"
+        android:name="com.blankymunn3.materialfragmenttransform.fragment.HomeSecFragment"
+        android:label="home_sec_fragment"
+        tools:layout="@layout/fragment_home_sec">
+        <argument
+            android:name="pictureUid"
+            app:argType="integer" />
+    </fragment>
+</navigation>
